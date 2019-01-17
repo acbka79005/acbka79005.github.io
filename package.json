@@ -1,0 +1,32 @@
+{
+  "name": "acbka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-prettify": "^0.4.0",
+    "grunt-sass": "^3.0.2",
+    "grunt-twig-render": "^1.8.2",
+    "jit-grunt": "^0.10.0",
+    "node-sass": "^4.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acbka79005/acbka79005.github.io.git"
+  },
+  "author": "@gsusg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acbka79005/acbka79005.github.io/issues"
+  },
+  "homepage": "https://github.com/acbka79005/acbka79005.github.io#readme"
+}

@@ -1,0 +1,68 @@
+//# Functions
+//
+//*
+
+
+//## Helpers
+//
+//*
+
+@function digit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+
+//## Media Screens
+//
+//*
+
+@function screen($key: lg) {
+    @return map-get($grid-breakpoints, $key);
+}
+
+@function screen-down($key: lg) {
+    @return map-get($grid-breakpoints, $key) - 1;
+}
+
+
+//## Type & Grid
+//
+//*
+
+@function spacer($key: 2) {
+    @return map-get($spacers, $key);
+}
+
+@function gap($key: 2) {
+    @return map-get($gaps, $key);
+}
+
+@function box($key: lg) {
+    @return map-get($container-max-widths, $key);
+}
+
+@function heading($index) {
+    @return map-get($headings-font-size, $index);
+}
+
+
+//## Graphics
+//
+//*
+
+@function svg-url($map, $color) {
+    $path:  map-get($map, 'path');
+    $w:     'auto';
+    $h:     'auto';
+    $size:  map-get($map, 'size');
+
+    @if $size {
+        $w:   digit($size);
+        $h:   digit($size);
+    } @else {
+        $w:   digit(map-get($map, 'width'));
+        $h:   digit(map-get($map, 'height'));
+    }
+
+    @return str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 #{$w} #{$h}'%3E%3Cpath fill='#{$color}' d='#{$path}'/%3E%3C/svg%3E"), "#", "%23");
+}

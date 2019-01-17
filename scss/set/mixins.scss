@@ -1,0 +1,192 @@
+//# Mixins
+//
+//*
+
+
+//## Screens
+//
+//*
+
+//** Down
+@mixin screen-ip6-max() {
+    @media (max-width: $iPhone6-w - 1) {
+        @content;
+    }
+}
+
+@mixin screen-xs-max() {
+    @media (max-width: screen-down(sm)) {
+        @content;
+    }
+}
+
+@mixin screen-sm-max() {
+    @media (max-width: screen-down(md)) {
+        @content;
+    }
+}
+
+@mixin screen-md-max() {
+    @media (max-width: screen-down()) {
+        @content;
+    }
+}
+
+@mixin screen-lg-max() {
+    @media (max-width: screen-down('xl')) {
+        @content;
+    }
+}
+
+@mixin screen-xl-max() {
+    @media (max-width: screen-down('xxl')) {
+        @content;
+    }
+}
+
+//** Up
+@mixin screen-xs() {
+    @media (min-width: screen('xs')) {
+        @content;
+    }
+}
+
+@mixin screen-ip6() {
+    @media (min-width: $iPhone6-w) {
+        @content;
+    }
+}
+
+@mixin screen-sm() {
+    @media (min-width: screen('sm')) {
+        @content;
+    }
+}
+
+@mixin screen-md() {
+    @media (min-width: screen('md')) {
+        @content;
+    }
+}
+
+@mixin screen-lg() {
+    @media (min-width: screen()) {
+        @content;
+    }
+}
+
+@mixin screen-xl() {
+    @media (min-width: screen('xl')) {
+        @content;
+    }
+}
+
+@mixin screen-xxl() {
+    @media (min-width: screen('xxl')) {
+        @content;
+    }
+}
+
+//** Between
+@mixin screen-sm-lg() {
+    @media (min-width: screen('sm')) and (max-width: screen-down()) {
+        @content;
+    }
+}
+@mixin screen-sm-xxl() {
+    @media (min-width: screen('sm')) and (max-width: screen-down(xl)) {
+        @content;
+    }
+}
+@mixin screen-lg-xl() {
+    @media (min-width: screen()) and (max-width: screen-down('xl')) {
+        @content;
+    }
+}
+@mixin screen-xl-xxl() {
+    @media (min-width: screen('xl')) and (max-width: screen-down('xxl')) {
+        @content;
+    }
+}
+
+
+//## Graphics
+//
+//* atomTODO: SVG mixin + funciton
+
+@mixin filter-black() {
+    filter: brightness(0);
+}
+
+@mixin filter-white() {
+    filter: brightness(0) invert(1);
+}
+
+//** Use to unfilter mixins (semantic)
+@mixin filter-off() {
+    filter: none;
+}
+
+@mixin scale-size($w-original, $h-original, $w) {
+    width: $w;
+    height: ceil(($w / $w-original) * $h-original);
+}
+
+
+//### SVG
+//** atomTODO: update SVG mixins, base SVG variables & datafile and twig base markdown generation.
+@mixin pseudo-svg(
+        $map,
+        $w: false,
+        $h: false,
+        $c: false
+    )
+{
+    $size:          map-get($map, 'size');
+    $width:         map-get($map, 'width');
+    $height:        map-get($map, 'height');
+
+    $scaleSize:     map-get($map, 'scaleSize');
+    $scaleWidth:    map-get($map, 'scaleWidth');
+    $scaleHeight:   map-get($map, 'scaleHeight');
+
+    $color:         map-get($map, 'color');
+
+    @if not $w {
+        @if $size {
+            $w: $size;
+            $h: $size;
+        } @else {
+            $w: $width;
+            $h: $height;
+        }
+
+        @if $scaleSize {
+            $w: $scaleSize;
+            $h: $scaleSize;
+        }
+
+        @if $scaleWidth {
+            $w: $scaleWidth;
+            $h: $scaleHeight;
+        }
+    }
+
+    @if not $c {
+        $c: gray('800');
+
+        @if $color {
+            $c: $color;
+        }
+    }
+
+    content: '';
+    background: svg-url($map, $c) no-repeat 50% 50%;
+    display: block;
+    width: $w;
+    height: $h;
+}
+
+@mixin bg-svg($map, $color: gray('800')) {
+    background: svg-url($map, $color) no-repeat 50% 50%;
+}
