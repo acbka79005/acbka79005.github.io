@@ -11,14 +11,21 @@
 
 {% block main %}
     <main>
-        <ol style="padding-top: 1rem;">
-            {% for page in pages %}
+        <ul class="c-nav-list">
+            {% for item in pages %}
                 {% if loop.index > 1 %}
+                    {% if loop.index == 4 %}
+                        <li></li>
+                    {% endif %}
+
                     <li>
-                        <a href="{{ page.href }}">{{ page.title }}</a>
+                        <a href="{{ item.href }}">
+                            {# {{ item.title }} #}
+                            <img src="{{ App[0].pImg }}/{{ item.id }}.jpg" width="2156" height="3026" alt="{{ item.title }}">
+                        </a>
                     </li>
                 {% endif %}
             {% endfor %}
-        </ol>
+        </ul>
     </main>
 {% endblock %}
