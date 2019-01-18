@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html{#  lang="{{ App[0].lang }}" #}>
     <head>
-        {% include '../_includes/app/_head.twig' %}
+        {% include '../_app/_head.twig' %}
     </head>
 
     <body>
-        {# {% include '../app/banner.twig' %} #}
+        {# {% include '../_app/_banner.twig' %} #}
 
         {% block main %}{% endblock %}
 
-        {# {% include '../app/footer.twig' %} #}
+        {# {% include '../_app/_footer.twig' %} #}
 
-        {# {% include '../app/js.twig' %} #}
+        {% include '../_app/_js.twig' %}
     </body>
 </html>

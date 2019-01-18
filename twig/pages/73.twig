@@ -1,23 +1,9 @@
 {% extends '../templates/base.twig' %}
 
-{% set PID = '00' %}
-
-{% set PAGE = '' %}
-{% for data in pages %}
-    {% if data.id == PID %}
-        {% set PAGE = data %}
-    {% endif %}
-{% endfor %}
+{% set PID = '01' %}{% set PAGE = '' %}{% for data in pages %}{% if data.id == PID %}{% set PAGE = data %}{% endif %}{% endfor %}
 
 {% block main %}
     <main>
-        <div class="c-img-box">
-            <img src="{{ App[0].pImg }}/{{ PAGE.id }}.jpg" width="2156" height="3026" class="c-img" alt="{{ PAGE.title }}">
-        </div>
-
-        <audio autoplay loop>
-            <source src="{{ App[0].pAudio }}/{{ PAGE.id }}.wav" type="audio/wav">
-            <p>Your browser does not support the <code>audio</code> element.</p>
-        </audio>
+        {% include '../_misc/_postcard.twig' %}
     </main>
 {% endblock %}

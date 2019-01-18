@@ -1,0 +1,24 @@
+{% extends '../templates/base.twig' %}
+
+{% set PID = '00' %}
+
+{% set PAGE = '' %}
+{% for data in pages %}
+    {% if data.id == PID %}
+        {% set PAGE = data %}
+    {% endif %}
+{% endfor %}
+
+{% block main %}
+    <main>
+        <ol style="padding-top: 1rem;">
+            {% for page in pages %}
+                {% if loop.index > 1 %}
+                    <li>
+                        <a href="{{ page.href }}">{{ page.title }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ol>
+    </main>
+{% endblock %}

@@ -2,6 +2,8 @@
 //
 //*
 
+$gap: 10px;
+
 .c-img {
     max-width: 100%;
     max-height: 100%;
@@ -23,4 +25,38 @@
     left: 0;
     right: 0;
     // object-fit: contain;
+}
+
+.c-btn-player {
+    display: block;
+    position: absolute;
+    // top: 0;
+    bottom: $gap * 1.5;
+    // left: 0;
+    right: $gap;
+    width: map-get($i-play, 'width');
+    height: map-get($i-play, 'height');
+    padding: 0;
+    background: 0 0;
+    border: 0;
+    overflow: hidden;
+    color: transparent;
+    outline: none !important;
+
+    &:before {
+        @include pseudo-svg($i-play);
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    &.is-active {
+        &:before {
+            @include pseudo-svg($i-pause);
+        }
+    }
 }

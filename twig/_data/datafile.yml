@@ -5,23 +5,38 @@ App:
     pAudio: 'audio'
 
 pages:
-  - id:    '00'
+  - id: '00'
+    title: '<3'
+    href: 'index.html'
+  - id: '01'
     title: '73e637hjeoi9q1'
-    href:  '73.html'
+    href: '73.html'
     # 73 73e637hjeoi9q1
-
-# hhh67iokYUI
-# 138-141
-# 0175рррГевйсЩ
-# 8361aaa827D.m4a
-# ae454545ö
-# elknjhbeqrfh6RRR5
-# лооии0
-# 73
-# 0175
-# ае4
-# elk
-# hhh
-# 139-141
-# лооии
-# 8361
+  - id: '02'
+    title: '0175рррГевйсЩ'
+    href: '0175.html'
+    # 0175 0175рррГевйсЩ
+  # - id: '03'
+  #   title: '138-141'
+  #   href: '138-141.html'
+  #   # 138-141 138-141
+  - id: '04'
+    title: '8361aaa827D'
+    href: '8361.html'
+    # 8361 8361aaa827D
+  - id: '05'
+    title: 'ae454545ö'
+    href: 'ае4.html'
+    # ае4 ae454545ö
+  - id: '06'
+    title: 'elknjhbeqrfh6RRR5'
+    href: 'elk.html'
+    # elk elknjhbeqrfh6RRR5
+  - id: '07'
+    title: 'hhh67iokYUI'
+    href: 'hhh.html'
+    # hhh hhh67iokYUI
+  - id: '08'
+    title: 'лооии0'
+    href: 'looii.html'
+    # looii лооии0
