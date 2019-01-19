@@ -14,14 +14,13 @@
         <ul class="c-nav-list">
             {% for item in pages %}
                 {% if loop.index > 1 %}
-                    {% if loop.index == 4 %}
-                        <li></li>
-                    {% endif %}
-
                     <li>
                         <a href="{{ item.href }}">
-                            {# {{ item.title }} #}
-                            <img src="{{ App[0].pImg }}/{{ item.id }}.jpg" width="2156" height="3026" alt="{{ item.title }}">
+                            {% if item.list %}
+                                {% include '../_misc/_postcard-list.twig' with { data: item } %}
+                            {% else %}
+                                <img src="{{ App[0].pImg }}/{{ item.id }}.jpg" width="2156" height="3026" alt="{{ item.title }}">
+                            {% endif %}
                         </a>
                     </li>
                 {% endif %}

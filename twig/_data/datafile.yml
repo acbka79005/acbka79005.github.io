@@ -6,10 +6,8 @@ App:
 
 pages:
   - id: '00'
-    title: '<3'
+    title: 'gift card @cbka'
     href: 'index.html'
-    imgW: ''
-    imgH: '1080'
   - id: '01'
     title: '73e637hjeoi9q1'
     href: '73.html'
@@ -22,10 +20,23 @@ pages:
     imgW: '1441'
     imgH: '1080'
     # 0175 0175рррГевйсЩ
-  # - id: '03'
-  #   title: '138-141'
-  #   href: '138-141.html'
-  #   # 138-141 138-141
+  - id: '03'
+    title: '138-141'
+    href: '138-141.html'
+    list:
+      - title: 138
+        imgW: 1441
+        imgH: 1080
+      - title: 139
+        imgW: 810
+        imgH: 1080
+      - title: 140
+        imgW: 1920
+        imgH: 679
+      - title: 141
+        imgW: 810
+        imgH: 1080
+    # 138-141 138-141
   - id: '04'
     title: '8361aaa827D'
     href: '8361.html'

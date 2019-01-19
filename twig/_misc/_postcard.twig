@@ -1,5 +1,9 @@
 <div class="c-img-box">
-    <img src="{{ App[0].pImg }}/{{ PAGE.id }}.jpg" width="{{ PAGE.imgW }}" height="{{ PAGE.imgH }}" class="c-img" alt="{{ PAGE.title }}">
+    {% if PAGE.list %}
+        {% include '_postcard-list.twig' with { data: PAGE } %}
+    {% else %}
+        <img src="{{ App[0].pImg }}/{{ PAGE.id }}.jpg" width="{{ PAGE.imgW }}" height="{{ PAGE.imgH }}" class="c-img" alt="{{ PAGE.title }}">
+    {% endif %}
 </div>
 
 <audio loop class="js-player">

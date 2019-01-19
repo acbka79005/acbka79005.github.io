@@ -1,0 +1,7 @@
+<ul class="c-img-list">
+    {% for item in data.list %}
+        <li>
+            <img src="{{ App[0].pImg }}/{{ item.title }}.jpg" width="{{ item.imgW }}" height="{{ item.imgH }}" class="c-img" alt="{{ item.title }}">
+        </li>
+    {% endfor %}
+</ul>
