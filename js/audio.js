@@ -15,6 +15,10 @@ var AUDIO = function () {
         $player = document.querySelectorAll(Selector.player)[0],
         $btn = document.querySelectorAll(Selector.btn)[0];
 
+    if (!$player) {
+        return;
+    }
+
     $btn.addEventListener('click', function () {
         if ($player.paused) {
             $player.play();
