@@ -40,32 +40,47 @@ pages:
         imgH: 1080
     # 138-141 138-141
   - id: '04'
-    title: '8361aaa827D'
-    href: '8361.html'
-    imgW: '1242'
-    imgH: '1080'
-    # 8361 8361aaa827D
-  - id: '05'
     title: 'ae454545ö'
     href: 'ае4.html'
     imgW: '773'
     imgH: '1080'
     # ае4 ae454545ö
-  - id: '06'
+  - id: '05'
     title: 'elknjhbeqrfh6RRR5'
     href: 'elk.html'
     imgW: '1441'
     imgH: '1080'
     # elk elknjhbeqrfh6RRR5
-  - id: '07'
+  - id: '06'
     title: 'hhh67iokYUI'
     href: 'hhh.html'
     imgW: '907'
     imgH: '1080'
     # hhh hhh67iokYUI
-  - id: '08'
+  - id: '07'
     title: 'лооии0'
     href: 'looii.html'
     imgW: '1440'
     imgH: '1080'
     # looii лооии0
+  - id: '08'
+    title: '8361aaa827D'
+    href: '8361.html'
+    isFast: true
+    list:
+      - title: 080
+        imgW: 1242
+        imgH: 931
+      - title: 081
+        imgW: 1242
+        imgH: 923
+      - title: 082
+        imgW: 1242
+        imgH: 923
+      - title: 083
+        imgW: 1242
+        imgH: 931
+      - title: 084
+        imgW: 1441
+        imgH: 1080
+    # 8361 8361aaa827D
