@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<title>{{ PAGE.title }}</title>{# | {{  App[0].title }} #}
+<title>{{ PAGE.title }} | {{  App[0].title }}</title>
 
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,5 +17,10 @@
 <meta name="msapplication-config" content="favs/browserconfig.xml">
 <meta name="theme-color" content="#0000fe">
 
-<link rel="stylesheet" href="css/bs.css">
-<link rel="stylesheet" href="css/app.css">
+{% if isPub %}
+    <link rel="stylesheet" href="css/bs.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+{% else %}
+    <link rel="stylesheet" href="css/bs.css">
+    <link rel="stylesheet" href="css/app.css">
+{% endif %}

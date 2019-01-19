@@ -1,12 +1,14 @@
+isPub: true
+
 App:
-  - title: 'Nas T'
+  - title: '@cbka'
     lang: 'en'
     pImg: 'img'
     pAudio: 'audio'
 
 pages:
   - id: '00'
-    title: 'gift card @cbka'
+    title: 'gift cards'
     href: 'index.html'
   - id: '01'
     title: '73e637hjeoi9q1'

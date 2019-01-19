@@ -13,6 +13,7 @@
     "grunt-prettify": "^0.4.0",
     "grunt-sass": "^3.0.2",
     "grunt-twig-render": "^1.8.2",
+    "grunt-uncss": "^0.8.5",
     "jit-grunt": "^0.10.0",
     "node-sass": "^4.11.0"
   },

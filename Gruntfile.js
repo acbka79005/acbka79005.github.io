@@ -129,6 +129,22 @@ module.exports = function (grunt) {
                     ]
                 }
             },
+
+            //#### Public
+            pub: {
+                options: {
+                    implementation: sass,
+                },
+
+                files: {
+                    '<%= pCss %>/bs.min.css': [
+                        '<%= pScss %>/bs.scss',
+                    ],
+                    '<%= pCss %>/app.min.css': [
+                        '<%= pScss %>/app.scss'
+                    ],
+                }
+            },
         },
 
         //### Autoprefixer
@@ -146,32 +162,59 @@ module.exports = function (grunt) {
 
                 files: [{
                     expand: true,
-                    src:    '<%= pCss %>/*.css'
+                    src: '<%= pCss %>/*.css'
                 }]
             },
         },
 
-        // cssmin: {
-        //     options: {
-        //         level: 2,
-        //         roundingPrecision: false
-        //         // format: 'keep-breaks'
-        //     },
+        uncss: {
+            bs: {
+                options: {
+                    stylesheets: [
+                        '<%= pCss %>/bs.min.css'
+                    ]
+                },
 
-        //     pubDev: {
-        //         files: {
-        //             '<%= pPub %>/_css/bs.min.css':    ['<%= pPub %>/_css/bs.min.css'],
-        //             '<%= pPub %>/_css/app.min.css':   ['<%= pPub %>/_css/app.min.css']
-        //         }
-        //     },
+                files: {
+                    '<%= pCss %>/bs.min.css': [
+                        '*.html'
+                    ]
+                },
+            },
 
-        //     public: {
-        //         files: {
-        //             '<%= pCssPub %>/bs.min.css':    ['<%= pDumpPub %>/bs.uncss.css'],
-        //             '<%= pCssPub %>/app.min.css':   ['<%= pDumpPub %>/app.uncss.css']
-        //         }
-        //     },
-        // },
+            // app: {
+            //     options: {
+            //         ignore: [
+            //             /^.is-active/
+            //         ],
+
+            //         stylesheets: [
+            //             '<%= pCss %>/app.min.css'
+            //         ]
+            //     },
+
+            //     files: {
+            //         '<%= pCss %>/app.min.css': [
+            //             '*.html'
+            //         ]
+            //     },
+            // },
+        },
+
+        cssmin: {
+            options: {
+                level: 2,
+                roundingPrecision: false
+                // format: 'keep-breaks'
+            },
+
+            public: {
+                files: {
+                    '<%= pCss %>/bs.min.css': ['<%= pCss %>/bs.min.css'],
+                    '<%= pCss %>/app.min.css': ['<%= pCss %>/app.min.css']
+                }
+            },
+        },
 
         //### Watch
         watch: {
@@ -233,6 +276,13 @@ module.exports = function (grunt) {
     //* Register tasks
     grunt.registerTask('default', [
         'browserSync',
-        'watch'
+        'watch',
+    ]);
+
+    //* Register tasks
+    grunt.registerTask('build', [
+        'sass:pub',
+        'uncss',
+        'cssmin',
     ]);
 };
