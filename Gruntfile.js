@@ -87,8 +87,7 @@ module.exports = function (grunt) {
             app: {
                 expand: true,
 
-                src:    '<%= pAppTpl %>/*',
-                ext:    '.html'
+                src:    '<%= pApp %>/*.html',
             },
         },
 
@@ -281,6 +280,8 @@ module.exports = function (grunt) {
 
     //* Register tasks
     grunt.registerTask('build', [
+        'twigRender:app',
+        'prettify',
         'sass:pub',
         'uncss',
         'cssmin',
