@@ -2,13 +2,15 @@
     {% if PAGE.list %}
         {% include '_postcard-list.twig' with { data: PAGE } %}
     {% else %}
-        <img src="{{ App[0].pImg }}/{{ PAGE.id }}.jpg" width="{{ PAGE.imgW }}" height="{{ PAGE.imgH }}" class="c-img" alt="{{ PAGE.title }}">
+        <img src="{{ App[0].pImg }}/{{ PAGE.id }}.{{ PAGE.isImgPng ? 'png' : 'jpg' }}" width="{{ PAGE.imgW }}" height="{{ PAGE.imgH }}" class="c-img" alt="{{ PAGE.title }}">
     {% endif %}
 </div>
 
-<audio loop class="js-player">
-    <source src="{{ App[0].pAudio }}/{{ PAGE.id }}.mp3" type="audio/mp3">
-    <p>Your browser does not support the <code>audio</code> element.</p>
-</audio>
+{% if PAGE.hasAudio %}
+    <audio loop class="js-player">
+        <source src="{{ App[0].pAudio }}/{{ PAGE.id }}.mp3" type="audio/mp3">
+        <p>Your browser does not support the <code>audio</code> element.</p>
+    </audio>
+{% endif %}
 
 <button type="button" class="c-btn-player js-player-btn">Play</button>
