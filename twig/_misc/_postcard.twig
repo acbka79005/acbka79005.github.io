@@ -4,6 +4,8 @@
     {% else %}
         <img src="{{ App[0].pImg }}/{{ PAGE.id }}.{{ PAGE.isImgPng ? 'png' : 'jpg' }}" width="{{ PAGE.imgW }}" height="{{ PAGE.imgH }}" class="c-img" alt="{{ PAGE.title }}">
     {% endif %}
+
+    <button type="button" class="c-btn-player js-player-btn">Play</button>
 </div>
 
 {% if PAGE.hasAudio %}
@@ -13,4 +15,3 @@
     </audio>
 {% endif %}
 
-<button type="button" class="c-btn-player js-player-btn">Play</button>

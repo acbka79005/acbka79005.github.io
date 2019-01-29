@@ -19,7 +19,7 @@
                             {% if item.list %}
                                 {% include '../_misc/_postcard-list.twig' with { data: item } %}
                             {% else %}
-                                <img src="{{ App[0].pImg }}/{{ item.id }}.jpg" width="2156" height="3026" alt="{{ item.title }}">
+                                <img src="{{ App[0].pImg }}/{{ item.id }}.{{ item.isImgPng ? 'png' : 'jpg' }}" width="{{ item.imgW }}" height="{{ item.imgH }}" alt="{{ item.title }}">
                             {% endif %}
                         </a>
                     </li>

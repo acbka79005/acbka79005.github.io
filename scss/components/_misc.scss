@@ -5,9 +5,10 @@
 $body-bg: #0000fe;
 $gap: 10px;
 
-body {
-    background: $body-bg;
+html {
+    height: 100%;
 }
+
 
 //## Nav
 //
@@ -52,7 +53,7 @@ body {
         }
     }
 
-    li {
+    > li {
         width: (100% / 3);
         height: (100vh / 3);
 
@@ -70,6 +71,13 @@ body {
         //         color: $black;
         //     }
         // }
+
+        &:last-child {
+            img {
+                max-width: 75%;
+                max-height: 75%;
+            }
+        }
     }
 }
 
@@ -183,6 +191,7 @@ body {
 }
 
 .c-img-box {
+    overflow: hidden;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -206,15 +215,26 @@ body {
 //
 //*
 
+$btn-play-w: map-get($i-play, 'width');
+$btn-play-h: map-get($i-play, 'height');;
+$btn-play-r: $gap;
+$btn-play-b: ($btn-play-r * 1.5);
+
+$btn-play-error-steps: 3;
+$btn-play-error-time: .21s;
+$btn-play-error-shift-x: ($btn-play-w + $btn-play-r);
+$btn-play-error-shift-y: ($btn-play-h + $btn-play-b);
+
 .c-btn-player {
     display: block;
     position: absolute;
+    z-index: 1;
     // top: 0;
-    bottom: $gap * 1.5;
+    bottom: $btn-play-b;
     // left: 0;
-    right: $gap;
-    width: map-get($i-play, 'width');
-    height: map-get($i-play, 'height');
+    right: $btn-play-r;
+    width: $btn-play-w;
+    height: $btn-play-h;
     padding: 0;
     background: 0 0;
     border: 0;
@@ -236,6 +256,21 @@ body {
     &.is-active {
         &:before {
             @include pseudo-svg($i-pause);
+        }
+    }
+
+    &.is-error {
+        animation: play-error $btn-play-error-time step-end forwards;
+    }
+}
+
+@keyframes play-error {
+    @for $i from 1 through $btn-play-error-steps {
+        #{(100% / $btn-play-error-steps) * $i} {
+            transform: translate(
+                (($btn-play-error-shift-x / $btn-play-error-steps) * $i),
+                -(($btn-play-error-shift-y / $btn-play-error-steps) * $i)
+            );
         }
     }
 }
