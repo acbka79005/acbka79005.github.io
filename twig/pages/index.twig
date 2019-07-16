@@ -1,18 +1,11 @@
 {% extends '../templates/base.twig' %}
 
-{% set PID = '00' %}
-
-{% set PAGE = '' %}
-{% for data in pages %}
-    {% if data.id == PID %}
-        {% set PAGE = data %}
-    {% endif %}
-{% endfor %}
+{% set PAGE = GIFT.index %}
 
 {% block main %}
     <main>
         <ul class="c-nav-list">
-            {% for item in pages %}
+            {% for item in GIFT %}
                 {% if loop.index > 1 %}
                     <li>
                         <a href="{{ item.href }}">

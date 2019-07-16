@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html{#  lang="{{ App[0].lang }}" #}>
+    <head>
+        {% include '../_app/_head.twig' %}
+    </head>
+
+    <body>
+        {# {% include '../_app/_banner.twig' %} #}
+
+        {% block main %}{% endblock %}
+
+        {# {% include '../_app/_footer.twig' %} #}
+
+        {% include '../_app/_playlist-js.twig' %}
+    </body>
+</html>

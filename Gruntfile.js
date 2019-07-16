@@ -26,8 +26,9 @@ module.exports = function (grunt) {
 
         //#### Source
 
-        pScss:      '<%= pApp %>/scss',
-        pCss:       '<%= pApp %>/css',
+        pScss: '<%= pApp %>/scss',
+        pCss: '<%= pApp %>/css',
+        pJS: '<%= pApp %>/js',
 
 
         //## Setting Tasks
@@ -40,9 +41,9 @@ module.exports = function (grunt) {
                     // ghostMode: false,
 
                     server: {
-                        directory:  true,
+                        directory: true,
 
-                        baseDir:    '<%= pApp %>/'
+                        baseDir: '<%= pApp %>/'
                     }
                 },
 
@@ -51,9 +52,7 @@ module.exports = function (grunt) {
                         '<%= pApp %>/*.html',
 
                         '<%= pCss %>/*.css',
-                        // '<%= pApp %>/js/**/*.js', //**atomTODO: update this
-
-                        // '<%= pCssPub %>/*.css'
+                        '<%= pJS %>/**/*',
                     ]
                 },
             }
@@ -219,7 +218,7 @@ module.exports = function (grunt) {
         watch: {
             options: {
                 livereload: true,
-                spawn:      false,
+                spawn: false,
             },
 
             //#### Watch Twig App
@@ -251,23 +250,23 @@ module.exports = function (grunt) {
                 files: [
                     '<%= pScss %>/set/*',
 
-                    //** Tsn layouts
                     '<%= pScss %>/app.scss',
                     '<%= pScss %>/components/**/*'
                 ],
 
-                //**atomTODO: update autoprefixer
                 tasks: [
                     'sass:app',
                     'autoprefixer:app'
                 ]
             },
 
-            //#### Watch Sass App
+            //#### Watch JS
             // js: {
             //     files: [
-            //         '<%= pApp %>/js/build/*',
-            //     ]
+            //         '<%= pJS %>/**/*',
+            //     ],
+
+            //     tasks: []
             // },
         },
     });

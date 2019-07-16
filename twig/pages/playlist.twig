@@ -1,0 +1,28 @@
+{% extends '../templates/playlist.twig' %}
+
+{% set PAGE = PLAYLIST %}
+
+{% block main %}
+    <main class="s-playlist">
+        <div class="c-pl-audio-box">
+            {% for item in PAGE.items %}
+                <div class="c-pl-audio">
+                    <img src="{{ item.img }}" class="c-pl-audio-img" width="{{ item.imgW }}" height="{{ item.imgH }}" alt="{{ item.title }}">
+
+                    <div class="c-audio-content">
+                        <h2 class="c-pl-audio-title">{{ item.title }}</h2>
+
+                        <button class="c-pl-audio-play js-audio-btn">PLAY</button>
+
+                        <div class="c-pl-audio-track js-audio" data-id="{{ item.audio }}"></div>
+
+                        <div class="c-pl-audio-text">
+                            <p>{{ item.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+
+{% endblock %}

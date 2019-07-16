@@ -1,4 +1,4 @@
-isPub: true
+isPub: false
 
 App:
   - title: '@cbka'
@@ -6,25 +6,29 @@ App:
     pImg: 'img'
     pAudio: 'audio'
 
-pages:
-  - id: '00'
+GIFT:
+  index:
+    id: '00'
     title: 'gift cards'
     href: 'index.html'
-  - id: '01'
+  card1:
+    id: '01'
     hasAudio: true
     # 73 73e637hjeoi9q1
     title: '73e637hjeoi9q1'
     href: '73.html'
     imgW: '770'
     imgH: '1080'
-  - id: '02'
+  card2:
+    id: '02'
     hasAudio: true
     # 0175 0175рррГевйсЩ
     title: '0175рррГевйсЩ'
     href: '0175.html'
     imgW: '1441'
     imgH: '1080'
-  - id: '03'
+  card3:
+    id: '03'
     hasAudio: true
     # 138-141 138-141
     title: '138-141'
@@ -42,35 +46,40 @@ pages:
       - title: 141
         imgW: 810
         imgH: 1080
-  - id: '04'
+  card4:
+    id: '04'
     hasAudio: true
     # ае4 ae454545ö
     title: 'ae454545ö'
     href: 'ае4.html'
     imgW: '773'
     imgH: '1080'
-  - id: '05'
+  card5:
+    id: '05'
     hasAudio: true
     # elk elknjhbeqrfh6RRR5
     title: 'elknjhbeqrfh6RRR5'
     href: 'elk.html'
     imgW: '1441'
     imgH: '1080'
-  - id: '06'
+  card6:
+    id: '06'
     hasAudio: true
     # hhh hhh67iokYUI
     title: 'hhh67iokYUI'
     href: 'hhh.html'
     imgW: '907'
     imgH: '1080'
-  - id: '07'
+  card7:
+    id: '07'
     hasAudio: true
     # looii лооии0
     title: 'лооии0'
     href: 'looii.html'
     imgW: '1440'
     imgH: '1080'
-  - id: '08'
+  card8:
+    id: '08'
     hasAudio: true
     # 8361 8361aaa827D
     # fire.wav
@@ -93,7 +102,8 @@ pages:
       - title: 084
         imgW: 1441
         imgH: 1080
-  - id: '09'
+  card9:
+    id: '09'
     hasAudio: true
     # кккккккк kkkkkkkk
     title: 'кккккккк'
@@ -101,7 +111,8 @@ pages:
     imgW: '1280'
     imgH: '960'
     isImgPng: true
-  - id: '10'
+  card10:
+    id: '10'
     hasAudio: true
     # g1rlf0r1end.mov
     title: 'FE3c5 + FE3c59 + E8B4'
@@ -117,10 +128,27 @@ pages:
       - title: E8B4
         imgW: 1242
         imgH: 925
-  - id: '11'
+  card11:
+    id: '11'
     # hasAudio: true
     # FF562 FF562D90-5143-411A-B76A-E1CA86385998
     title: 'FF562D90-5143-411A-B76A-E1CA86385998'
     href: 'FF562.html'
     imgW: '810'
     imgH: '1080'
+
+PLAYLIST:
+  title: play
+  items:
+    - title: '0he;bt'
+      description: 'the Star lights up... and with it the Pterodactyl Eda sings its tender song. all Personalities are calm for a long time'
+      img: 'playlist/96D530B4-6D5C-4D32-8C00-64FF5DFBCA86.jpg'
+      imgW: 100
+      imgH: 100
+      audio: 'playlist/0hebt.mp3'
+    - title: 'gjk'
+      description: 'reclined Stones are not as clear a solution as broken Mirrors. there is no Pilot behind the wheel of our Cosmodrome «Ласточка»'
+      img: 'playlist/IMG_6038.jpg'
+      imgW: 100
+      imgH: 100
+      audio: 'playlist/gjk.mp3'
