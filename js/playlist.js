@@ -17,18 +17,22 @@ var AUDIO = function () {
             $btn = $box.querySelector('.js-audio-btn'),
             id = $track.getAttribute('data-id'),
             WS = WaveSurfer.create({
-            container: $track,
-            waveColor: '#0000fe',
-            progressColor: '#0000b2',
-            // barGap: 5,
-            // barHeight: .5,
-            // barWidth: 5,
-            // cursorColor: '#eee',
-            // cursorWidth: 2,
-            height: 100,
-            hideScrollbar: true,
-            responsive: 17,
-        });
+                container: $track,
+                waveColor: '#0000fe',
+                progressColor: '#0000b2',
+                // barGap: 5,
+                // barHeight: .5,
+                // barWidth: 5,
+                // cursorColor: '#eee',
+                // cursorWidth: 2,
+                height: 100,
+                hideScrollbar: true,
+                responsive: 17,
+            });
+
+        if (!id) {
+            return false;
+        }
 
         Boxes.push($box);
         Tracks.push(WS);

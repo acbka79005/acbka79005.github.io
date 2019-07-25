@@ -152,3 +152,15 @@ PLAYLIST:
       imgW: 100
       imgH: 100
       audio: 'playlist/gjk.mp3'
+    - title: '///\\\sk0\\k0 mix 2019 EARTH'
+      description: 'around the Earth'
+      img: 'playlist/75F174A2-D43E-4127-803F-B5BEC43613AD.jpg'
+      imgW: 100
+      imgH: 100
+      # audio: 'playlist/38.mp3'
+    - title: '38 zkeйteRoff'
+      description: 'these were huge Bats with iron Heads and lilac Eyes. not scared at all. they shouted softly & gently'
+      img: 'playlist/328D68EA-CA25-4984-8518-33D40D66D32A.jpg'
+      imgW: 100
+      imgH: 100
+      audio: 'playlist/38.mp3'
