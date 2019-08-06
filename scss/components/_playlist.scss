@@ -12,9 +12,19 @@ $spacer: 1rem;
 }
 
 .c-pl-audio-title {
+    display: flex;
     margin-left: $gap * 2;
     margin-bottom: $spacer;
-    color: #f44800;
+    // color: red;
+
+
+    .o-title {
+        display: block;
+        background: linear-gradient(to right, black, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        box-decoration-break: clone;
+    }
 }
 
 .c-pl-audio-play {
