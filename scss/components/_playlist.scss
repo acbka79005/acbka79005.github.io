@@ -4,19 +4,31 @@
 
 $gap: $grid-gutter-width;
 $spacer: 1rem;
+$img-w-smd: 27%;
+
+//** Img width (screen: width)
+//* 767: 590
+//* 1920: 503
+//* 500
+$img-w-px: 500px;
 
 .c-pl-audio-img {
-    width: 27%;
+    width: 80%;
     height: auto;
-    margin-top: $h2-font-size * $headings-line-height;
+    max-width: $img-w-px;
+    // margin-top: $h2-font-size * $headings-line-height;
+    margin-bottom: $spacer;
+
+    @include screen-md {
+        width: $img-w-smd;
+    }
 }
 
 .c-pl-audio-title {
     display: flex;
-    margin-left: $gap * 2;
     margin-bottom: $spacer;
+    font-size: 1.4em;
     // color: red;
-
 
     .o-title {
         display: block;
@@ -25,12 +37,19 @@ $spacer: 1rem;
         -webkit-text-fill-color: transparent;
         box-decoration-break: clone;
     }
+
+    @include screen-md {
+        width: 100%;
+        margin-left: $img-w-smd;
+        margin-top: -$spacer;
+        padding-left: $gap * 2;
+        font-size: 2em;
+    }
 }
 
 .c-pl-audio-play {
     position: relative;
-    margin-left: $gap * 2;
-    margin-bottom: $spacer;
+    margin-left: $gap;
     padding: 2px 9px 0;
     background: transparent;
     border: 2px solid $black;
@@ -53,6 +72,11 @@ $spacer: 1rem;
             border-left-color: $black;
         }
     }
+
+    @include screen-md {
+        margin-bottom: $spacer;
+        margin-left: $gap * 2;
+    }
 }
 
 .c-pl-audio-track {
@@ -60,36 +84,58 @@ $spacer: 1rem;
 }
 
 .c-pl-audio-text {
-    margin-left: $gap * 2;
+    margin-left: $gap;
     // margin-bottom: $spacer * 2;
     margin-bottom: -$spacer;
     display: none;
+
+    @include screen-md {
+        margin-left: $gap * 2;
+    }
 }
 
-.c-audio-content {
-    flex-grow: 1;
+.c-pl-audio-content {
+    position: relative;
+    width: 100%;
 
-    &.is-active {
+    .is-active {
         .c-pl-audio-text {
             display: block;
+        }
+    }
+
+    @include screen-md {
+        display: flex;
+        align-items: flex-start;
+
+        > div {
+            flex-grow: 1;
         }
     }
 }
 
 .c-pl-audio {
-    display: flex;
-    align-items: flex-start;
-    // padding: $gap;
-    padding: $gap 0 $gap * 1.5;
-    // color: darken(#0000fe, 15%);
+    position: relative;
+    padding: $spacer 0 (1.5 * $spacer);
 
     & + & {
         border-top: 1px solid $black;
     }
+
+    @include screen-md {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: $gap 0 (1.5 * $gap);
+    }
 }
 
 .c-pl-audio-box {
-    padding: 0 $gap;
+    padding: 0 ($gap / 2);
+
+    @include screen-md {
+        padding: 0 $gap;
+    }
 }
 
 .s-playlist {
