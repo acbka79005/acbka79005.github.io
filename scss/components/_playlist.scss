@@ -30,13 +30,13 @@ $img-w-px: 500px;
     font-size: 1.4em;
     // color: red;
 
-    .o-title {
-        display: block;
-        background: linear-gradient(to right, black, red);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        box-decoration-break: clone;
-    }
+    // .o-title {
+    //     display: block;
+    //     background: linear-gradient(to right, black, red);
+    //     -webkit-background-clip: text;
+    //     -webkit-text-fill-color: transparent;
+    //     box-decoration-break: clone;
+    // }
 
     @include screen-md {
         width: 100%;
