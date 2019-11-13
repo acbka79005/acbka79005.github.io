@@ -140,68 +140,88 @@ PLAYLIST:
   title: play — recordz
   items:
     - title: '0he;bt'
-      description: 'the Star lights up... and with it the Pterodactyl Eda sings its tender song. all Personalities are calm for a long time'
+      description: 'the Star lights up... with it the Pterodactyl Eda sings its tender Song  all Personalities are calm for a long time'
       img: 'playlist/96D530B4-6D5C-4D32-8C00-64FF5DFBCA86.jpg'
       imgW: 500
       imgH: 501
       audio: 'playlist/0hebt.mp3'
     - title: 'gjk'
-      description: 'reclined Stones are not as clear a solution as broken Mirrors. there is no Pilot behind the wheel of our Spaceship «Ласточка»'
+      description: 'reclined Stones are not as clear solution as broken Mirrors  there is no Pilot behind the wheel of our Spaceship «Ласточка»'
       img: 'playlist/IMG_6038.jpg'
       imgW: 500
       imgH: 499
       audio: 'playlist/gjk.mp3'
-    - title: '///\\\sk0\\k0 mix 2019 EARTH'
-      description: 'around the Earth'
-      img: 'playlist/75F174A2-D43E-4127-803F-B5BEC43613AD.jpg'
+    # - title: '///\\\sk0\\k0 mix 2019 EARTH'
+    #   description: 'around the Earth'
+    #   img: 'playlist/75F174A2-D43E-4127-803F-B5BEC43613AD.jpg'
+    #   imgW: 500
+    #   imgH: 478
+    #   audio: 'playlist/sk0k0.mp3'
+    - title: 'ROMA REMIX'
+      description: 'insane Foreigner in Roma s Outback   Winter Night t'
+      img: 'playlist/roma-remix.jpg'
       imgW: 500
-      imgH: 478
-      audio: 'playlist/sk0k0.mp3'
+      imgH: 500
+      audio: 'playlist/romaremixreload.mp3'
     - title: '38 zke teRoff'
-      description: 'these were huge Bats with iron Heads and lilac Eyes. not scared at all. they shouted softly & gently'
+      description: 'these were huge Bats with iron Heads and lilac Eyes  not scared at all  they shouted softly & gently'
       img: 'playlist/328D68EA-CA25-4984-8518-33D40D66D32A.jpg'
       imgW: 500
       imgH: 499
       audio: 'playlist/38.mp3'
     - title: 'боLEzHb 2.1'
-      description: 'the Violin sings a sad & mystic Song about how the Disease “Laziness” conquers Humanity. we invited her to fly on with us. purple Horrizon'
+      description: 'the Violin sings a sad & mystic Song about how the Disease “Product” conquers Humanity   We invited her to fly on with us  purple Horrizon'
       img: 'playlist/IMG_6277.jpg'
       imgW: 500
       imgH: 500
       audio: 'playlist/LEzHb21.mp3'
+    - title: 'уй equivocal theme'
+      description: 'free Hands hold our Future Atmosphere'
+      img: 'playlist/equivocal-theme.jpg'
+      imgW: 500
+      imgH: 524
+      audio: 'playlist/equivocaltheme.mp3'
     - title: '$vtanz МЕТАЛ'
-      description: 'Fuel is running out. what to do next? the Door of Perception has changed its Key'
+      description: 'Fuel is running out  what to do next?  the Door of Perception has changed its Key'
       img: 'playlist/IMG_5958.jpg'
       imgW: 500
       imgH: 500
-      audio: 'playlist/vtanz.mp3'
+      # audio: 'playlist/vtanz.mp3'
+      audio: 'playlist/vtanzreload.mp3'
     - title: 'KлnteMpoR'
-      description: 'Real is Unreal. We do not exist. there is only You and Yours. <br>temporary contemporary'
+      description: 'Unreal is Real We do not exist there is only You and Yours Temporary'
       img: 'playlist/MpoR.jpg'
       imgW: 500
       imgH: 500
       audio: 'playlist/MpoR.mp3'
     - title: 'VHнЙ'
-      description: 'invalid System. there is no more Information. <br>We need to go on our way light. but it is impossible. We have Feelings and own Flow'
+      description: 'invalid System  there is no more Information  We need to go on our way light  it is impossible  We have Feelings and own Flow'
       img: 'playlist/insys.jpg'
       imgW: 500
       imgH: 500
       audio: 'playlist/insys.mp3'
     - title: 'y reir'
-      description: 'Gasoline is pouring from the Roof . or is it molten Metal. for the first time Everything inspiring. and then You become bored and You wanna go home'
-      img: 'playlist/reir.jpg'
-      imgW: 500
-      imgH: 501
-      audio: 'playlist/reir.mp3'
-    - title: '0k0л0'
-      description: 'do New to think New. do not distort the Old. Respect and Reverence. Peace and Love'
-      img: 'playlist/0k0.jpg'
+      description: 'Gasoline is pouring from the Roof  or is it molten Metal  for the first time Everything inspiring  and then You become bored and You wanna go home'
+      # img: 'playlist/reir.jpg'
+      img: 'playlist/y-reir.jpg'
       imgW: 500
       imgH: 500
-      audio: 'playlist/0k0.mp3'
+      audio: 'playlist/yreir.mp3'
+    # - title: '0k0л0'
+    #   description: 'do New to think New. do not distort the Old. Respect and Reverence. Peace and Love'
+    #   img: 'playlist/0k0.jpg'
+    #   imgW: 500
+    #   imgH: 500
+    #   audio: 'playlist/0k0.mp3'
+    - title: '0k0л0'
+      description: 'think New to do New  Respect and Reverence  Peace and Love'
+      img: 'playlist/okolo.jpg'
+      imgW: 500
+      imgH: 501
+      audio: 'playlist/okolo.mp3'
     - title: 'неправда'
       description: 'FALSEHOOD DECEPTION MENDACITY WRONG FLAM SKLENT PERFIDY LIE . on this our Paths diverge'
       img: 'playlist/IMG_3273.jpg'
       imgW: 500
       imgH: 489
-      audio: 'playlist/n0truth.mp3'
+      audio: 'playlist/nepravda.mp3'
