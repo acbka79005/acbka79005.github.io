@@ -167,7 +167,7 @@ PLAYLIST:
       description: 'these were huge Bats with iron Heads and lilac Eyes  not scared at all  they shouted softly & gently'
       img: 'playlist/328D68EA-CA25-4984-8518-33D40D66D32A.jpg'
       imgW: 500
-      imgH: 499
+      imgH: 500
       audio: 'playlist/38.mp3'
     - title: 'боLEzHb 2.1'
       description: 'the Violin sings a sad & mystic Song about how the Disease “Product” conquers Humanity   We invited her to fly on with us  purple Horrizon'
@@ -179,7 +179,7 @@ PLAYLIST:
       description: 'free Hands hold our Future Atmosphere'
       img: 'playlist/equivocal-theme.jpg'
       imgW: 500
-      imgH: 524
+      imgH: 509
       audio: 'playlist/equivocaltheme.mp3'
     - title: '$vtanz МЕТАЛ'
       description: 'Fuel is running out  what to do next?  the Door of Perception has changed its Key'
@@ -193,12 +193,12 @@ PLAYLIST:
       img: 'playlist/MpoR.jpg'
       imgW: 500
       imgH: 500
-      audio: 'playlist/MpoR.mp3'
+      audio: 'playlist/kontempor.mp3'
     - title: 'VHнЙ'
       description: 'invalid System  there is no more Information  We need to go on our way light  it is impossible  We have Feelings and own Flow'
       img: 'playlist/insys.jpg'
       imgW: 500
-      imgH: 500
+      imgH: 501
       audio: 'playlist/insys.mp3'
     - title: 'y reir'
       description: 'Gasoline is pouring from the Roof  or is it molten Metal  for the first time Everything inspiring  and then You become bored and You wanna go home'
@@ -216,8 +216,8 @@ PLAYLIST:
     - title: '0k0л0'
       description: 'think New to do New  Respect and Reverence  Peace and Love'
       img: 'playlist/okolo.jpg'
-      imgW: 500
-      imgH: 501
+      imgW: 500 # 403
+      imgH: 500 # 403
       audio: 'playlist/okolo.mp3'
     - title: 'неправда'
       description: 'FALSEHOOD DECEPTION MENDACITY WRONG FLAM SKLENT PERFIDY LIE . on this our Paths diverge'
